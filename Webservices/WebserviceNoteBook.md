@@ -24,11 +24,9 @@ XML - Extensible markup language - SOAP uses XML to exchange the data in between
 
 # SOAP messaging format
 
-<soap:envelope>
- <soap:header>
- </soap:header>
- <soap:body>
- </soap:body>
+soap:envelope
+ soap:header </soap:header>
+ soap:body </soap:body>
 </soap:envelope>
 
 ** Note: <soap:header> is optional.
@@ -38,17 +36,12 @@ WSDL - Webservice Description Language - Describes about webservices.
 
 # WSDL structure
 
-<definitions>
- <types>
- </types>
- <messages>
- </messages>
- <porttype>
- </porttype>
- <bindings>
- </bindings>
- <services>
- </services>
+definitions
+ types </types>
+ messages </messages>
+ porttype </porttype>
+ bindings </bindings>
+ services </services>
 </definitions>
 
 

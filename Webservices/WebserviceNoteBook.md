@@ -168,4 +168,4 @@ un-marshalling - convert xml into java object.
 
 For example, If you want to convert java object into JSON and vice-versa, then we need to add a library called Jackson.
 
-Download Jersey jar's: http://eclipse-ee4j.github.io/jersey/download.html
+Download Jersey jar's: https://www.javatpoint.com/jax-rs-file-download-example

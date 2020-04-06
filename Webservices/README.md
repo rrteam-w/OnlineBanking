@@ -1,7 +1,6 @@
 # JAXRSHelloWorld
-This is very basic example to display Hello World plain text in web browser.
-The follwing url is to Jersey JAR files.
-URL: https://www.javatpoint.com/jax-rs-file-download-example
+This is very basic example to display Hello World plain text in web browser. This is the url to download the Jersey JAR files
+URL: https://www.javatpoint.com/jax-rs-file-download-example.
 Place jar files in WEB-INF/lib folder or else create your own custom library in build path and add it to project.
 
 Note: Sometimes you may see ClassNotFoundException: org.glassfish.jersey.servlet.ServletContainer in the server console.

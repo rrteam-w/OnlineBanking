@@ -103,4 +103,19 @@ In this course, we are using jersey to implement the JAX-RS.
 
 ** marshalling - convert your java object into xml.
 ** un-marshalling - convert xml into java object.
-For example, If you want to convert java object into JSON and vice-versa, then we need to add a library called Jackson.
+For example, If you want to convert java object into JSON and vice-versa, then we need to add a library called Jackson and jettison.
+
+POST method is non-idempotent. This method is NOT repetable.
+PUT, GET, DELETE methods are Idempotent methods. These methods can be repetable.
+
+Idempotent is the property of certain operations in mathematics and computer science whereby they can be applied multiple times without changing the result beyond the initial application.
+
+# Error codes
+
+200 - ok - SUCCESS
+404 - NOT Found - method is not exists
+405 - Method Not Allowed - If there is no method exists but still you are making a call, in that scenario you will see this error.
+500 - Internal Server Error - If both methods type is same for example GET, when you try to access the resource it will throw ambiguity problem, because both methods types are same and it does not know which one need to pull first.
+
+To overcome this problem, either you need to provide @path to anyone of the method or add the @Produces annotation with different MIME types for both methods.
+

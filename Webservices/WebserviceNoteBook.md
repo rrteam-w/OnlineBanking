@@ -119,3 +119,10 @@ Idempotent is the property of certain operations in mathematics and computer sci
 
 To overcome this problem, either you need to provide @path to anyone of the method or add the @Produces annotation with different MIME types for both methods.
 
+# Browser Prioritization
+If you write all different MIME types without @Path annotation, for get request methods in a class. The browser will display following prioritization. like
+1. text/html
+2. application/xml
+3. text/xml
+4. text/plain
+5. application/json

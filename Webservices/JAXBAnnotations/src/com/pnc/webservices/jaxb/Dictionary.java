@@ -1,4 +1,4 @@
-package com.pnc.webservices.annotations;
+package com.pnc.webservices.jaxb;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;

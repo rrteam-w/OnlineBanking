@@ -1,4 +1,4 @@
-package com.pnc.webservices.annotations;
+package com.pnc.webservices.jaxb;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

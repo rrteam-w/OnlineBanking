@@ -8,6 +8,13 @@ Even though if you add the jar's, you will see above exception, In this case got
 
 # JAXRSAnnotations
 The following are the URL's to access the GET request's.
-** Pathparam - http://localhost:8080/JAXRSAnnotations/rest/form/path/40/20
-** Queryparam - http://localhost:8080/JAXRSAnnotations/rest/form/query?num1=20&num2=20
-** Matrixparam - http://localhost:8080/JAXRSAnnotations/rest/form/matrix;num1=20;num2=20
+** Pathparam - http://localhost:8080/JAXRSAnnotations/rest/input/10/10
+** Queryparam - http://localhost:8080/JAXRSAnnotations/rest/input?num1=10&num2=10
+** Matrixparam - http://localhost:8080/JAXRSAnnotations/rest/input;num1=10;num2=10
+
+# JAXBAnnotations
+Performing marshalling and un-marshalling by using JAX-B and Jackson.
+
+# JerseyClient
+In this example, Written Jersey client program to call webservice methods Instaed of accessing through web browser and postman.
+

@@ -1,3 +1,10 @@
+** Prerequisites to develop the JAX-WS and JAX-RS webservices in your local system.
+1. Basic knowledge on java, servlets and jsp.
+2. The following softwares need to be ready in your local system.
+2.1. Java - Download URL - https://www.filehorse.com/download-java-development-kit-32/19235/
+2.2. Eclipse IDE - Download URL - https://www.eclipse.org/downloads/packages/release/helios/sr2/eclipse-ide-java-ee-developers
+2.3. Tomcat server - Download URL - https://tomcat.apache.org/download-70.cgi
+
 # JAXRSHelloWorld
 This is very basic example to display Hello World plain text in web browser. This is the url to download the Jersey JAR files
 URL: https://www.javatpoint.com/jax-rs-file-download-example.

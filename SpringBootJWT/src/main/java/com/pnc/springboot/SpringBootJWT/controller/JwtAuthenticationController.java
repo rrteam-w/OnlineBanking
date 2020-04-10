@@ -9,7 +9,6 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +19,8 @@ import com.pnc.springboot.SpringBootJWT.config.JwtTokenUtil;
 import com.pnc.springboot.SpringBootJWT.config.SecurityConstants;
 import com.pnc.springboot.SpringBootJWT.model.JwtRequest;
 import com.pnc.springboot.SpringBootJWT.model.JwtResponse;
+import com.pnc.springboot.SpringBootJWT.model.UserDTO;
+import com.pnc.springboot.SpringBootJWT.service.JwtUserDetailsService;
 
 @RestController
 @CrossOrigin
@@ -32,7 +33,7 @@ public class JwtAuthenticationController {
 	private JwtTokenUtil jwtTokenUtil;
 
 	@Autowired
-	private UserDetailsService jwtInMemoryUserDetailsService;
+	private JwtUserDetailsService jwtInMemoryUserDetailsService;
 
 	@RequestMapping(value = "/authenticate", method = RequestMethod.POST)
 	public ResponseEntity<?> generateAuthenticationToken(@RequestBody JwtRequest authenticationRequest)
@@ -47,6 +48,12 @@ public class JwtAuthenticationController {
 
 		return ResponseEntity.ok(new JwtResponse(SecurityConstants.TOKEN_PREFIX+token));
 	}
+	
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
+	public ResponseEntity<?> saveUser(@RequestBody UserDTO user) throws Exception {
+		return ResponseEntity.ok(jwtInMemoryUserDetailsService.save(user));
+	}
+	
 
 	private void authenticate(String username, String password) throws Exception {
 		Objects.requireNonNull(username);

@@ -12,12 +12,12 @@ import com.pnc.ratinginfo.microservices.ratinginfoservice.model.UserRatings;
 public class RatingInfoController {
 	
 	@RequestMapping(value="/{movieId}")
-	public Rating getMovieRating(Integer movieId) {
+	public Rating getMovieRating(String movieId) {
 		return new Rating(movieId, 4);
 	}
 	
 	@RequestMapping(value="/users/{userId}")
-	public UserRatings getRatingsInfo(@PathVariable("userId") Integer userId){
+	public UserRatings getRatingsInfo(@PathVariable("userId") String userId){
 		UserRatings userRating = new UserRatings();
 		userRating.initData(userId);
 		return userRating;

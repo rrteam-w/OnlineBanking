@@ -6,13 +6,13 @@ import java.util.List;
 public class UserRatings {
 
 	private List<Rating> userRatings;
-	private Integer userId;
+	private String userId;
 	
-	public Integer getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 
@@ -24,11 +24,11 @@ public class UserRatings {
 		this.userRatings = userRatings;
 	}
 	
-	public void initData(Integer userId) {
+	public void initData(String userId) {
 		this.setUserId(userId);
 		this.setUserRatings(Arrays.asList(
-				new Rating(1234, 4),
-				new Rating(5678, 3)));
+				new Rating("100", 4),
+				new Rating("500", 3)));
 	}
 	
 }

@@ -3,12 +3,12 @@ package com.pnc.moviecatalog.microservices.moviecatalogservice.model;
 public class Rating {
 
 	private int rating;
-	private Integer movieId;
+	private String movieId;
 	
 	public Rating() {
 	}
 	
-	public Rating(Integer movieId, int rating) {
+	public Rating(String movieId, int rating) {
 		this.movieId = movieId;
 		this.rating = rating;
 	}
@@ -19,10 +19,10 @@ public class Rating {
 	public void setRating(int rating) {
 		this.rating = rating;
 	}
-	public Integer getMovieId() {
+	public String getMovieId() {
 		return movieId;
 	}
-	public void setMovieId(Integer movieId) {
+	public void setMovieId(String movieId) {
 		this.movieId = movieId;
 	}
 	
